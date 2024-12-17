@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>关于我们</h1>
+            <nav>
+                <a href="index.html">主页</a>
+                <a href="about.html">关于我们</a>
+                <a href="skills.html">我们的技能</a>
+                <a href="contact.html">联系我们</a>
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <h2>你好，我是 {{ people[currentIndex].name }}</h2>
+                <p>{{ people[currentIndex].description }}</p>
+                <button @click="toggleInfo">更多信息</button>
+                <div v-if="showInfo" class="info">
+                    <p>{{ people[currentIndex].info }}</p>
+                </div>
+                <div>
+                    <button @click="prevPerson" :disabled="currentIndex === 0">前一个</button>
+                    <button @click="nextPerson" :disabled="currentIndex === people.length - 1">下一个</button>
+                </div>
+            </section>
+            <section>
+                <h2>个人兴趣</h2>
+                <ul>
+                    <li v-for="(interest, index) in interests" :key="interest">
+                        {{ interest }} <button @click="removeInterest(index)">删除</button>
+                    </li>
+                </ul>
+                <input type="text" v-model="newInterest" placeholder="添加新兴趣">
+                <button @click="addInterest">添加兴趣</button>
+            </section>
+            
+            <section>
+                <h2>喜爱的歌曲</h2>
+                <ul>
+                    <li v-for="(song, index) in favoriteSongs" :key="song.title">
+                        {{ song.title }} - {{ song.artist }} <button @click="removeSong(index)">删除</button>
+                    </li>
+                </ul>
+                <input type="text" v-model="newSongTitle" placeholder="歌曲标题">
+                <input type="text" v-model="newSongArtist" placeholder="歌曲艺术家">
+                <button @click="addSong">添加歌曲</button>
+            </section>
+            
+        </main>
+        <footer>
+            <p>&copy; 欲买桂花同载酒，终不似，少年游</p>
+        </footer>
+    </div>
+    <script src="app1.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>期末答辩</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>欢迎来到我们的网站</h1>
+            <nav>
+                <a href="index.html">主页</a>
+                <a href="about.html">关于我们</a>
+                <a href="skills.html">我们的技能</a>
+                <a href="contact.html">联系我们</a>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>登录</h2>
+                <form @submit.prevent="login">
+                    <label>
+                        用户名：
+                        <input type="text" v-model="username" required>
+                    </label>
+                    <label>
+                        密码：
+                        <input type="password" v-model="password" required>
+                    </label>
+                    <button type="submit">登录</button>
+                </form>
+                <p>{{ loginMessage }}</p>
+                <button v-if="isLoggedIn" @click="logout">登出</button>
+            </section>
+            
+            <section class="hero" v-if="isLoggedIn">
+                <h2>你好，我们是来自广东科学技术职业学院23计算机14班的同学</h2>
+                <p>这是我们关于大二上学期课程：前端框架应用开发的期末答辩作业</p>
+                
+                <!-- 其他内容保持不变 -->
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 欲买桂花同载酒，终不似，少年游</p>
+        </footer>
+    </div>
+    <script src="app1.js"></script>
+</body>
+</html>
+

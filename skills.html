@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技能</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>我们的技能</h1>
+            <nav>
+                <a href="index.html">主页</a>
+                <a href="about.html">关于我们</a>
+                <a href="skills.html">我们的技能</a>
+                <a href="contact.html">联系我们</a>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>我们的技能列表</h2>
+                    <ul>
+                        <li v-for="skill in skills" :key="skill.name">
+                            <a :href="skill.link" target="_blank">{{ skill.name }}</a>
+                        </li>
+                    </ul>
+                    
+            </section>
+        </main>
+        <footer>
+            <p>&copy;欲买桂花同载酒，终不似，少年游</p>
+        </footer>
+    </div>
+    <script src="app1.js"></script>
+</body>
+</html>

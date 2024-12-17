@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.info {
+    margin-top: 20px;
+    transition: opacity 0.5s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 1px;
+    background-color: #399bbb;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 20px 0; 
+}
+
+li {
+    background: linear-gradient(to right, #18e7c1, #5f76e0);
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    margin: 10px 0; 
+    padding: 15px;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+li:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+a {
+    font-weight: bold;
+    display: inline-block; 
+    padding: 10px 15px; 
+    margin: 5px; 
+    border: 2px solid #333; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    color: #9765f5;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    color: #0056b3; 
+    background-color: #71e3e0;
+}
